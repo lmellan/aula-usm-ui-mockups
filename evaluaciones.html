@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Aula USM – Evaluaciones (Panel integrado)</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: "#003366", light: "#00AEEF" },
+            "background-light": "#F8F9FA",
+            "background-dark": "#121212",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1E1E1E",
+            "text-light": "#212529",
+            "text-dark": "#E0E0E0",
+            "subtle-light": "#6C757D",
+            "subtle-dark": "#A0A0A0",
+            "border-light": "#DEE2E6",
+            "border-dark": "#333333"
+          },
+          fontFamily: { display: ["Roboto","sans-serif"] },
+          borderRadius: { DEFAULT: "0.5rem" },
+          boxShadow: { card: "0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04)" }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<header class="bg-white dark:bg-card-dark border-b border-border-light dark:border-border-dark sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <div class="flex items-center gap-3">
+          <a href="home-principal.html" class="inline-flex items-center" aria-label="Ir a la página principal">
+            <img src="//aula.usm.cl/pluginfile.php/1/theme_moove/logo/1756716003/marca-color.png" class="h-8" alt="AULA USM">
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm text-subtle-light dark:text-subtle-dark">
+            <a href="home-principal.html" class="hover:text-primary-light">Página Principal</a>
+            <a href="area-personal.html" class="hover:text-primary-light">Área personal</a>
+            <a href="modulos.html" class="hover:text-primary-light">Mis cursos</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="text-subtle-light dark:text-subtle-dark hover:text-primary-light" aria-label="Buscar">
+            <span class="material-icons">search</span>
+          </button>
+          <button class="text-subtle-light dark:text-subtle-dark hover:text-primary-light" aria-label="Notificaciones">
+            <span class="material-icons">notifications</span>
+          </button>
+          <img class="h-8 w-8 rounded-full"
+               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPYlZGznwjbqpN6_x03eAzoC3cHnOkMbhbmM60njKzn1DzFMtDnEJWObBYdxx3V_NqSbhNROtuprINEB_QcPkdO4ir7_s7to-QeURFhXyeBRYuyGra7ZaCL3XG-SkCS4LvmYyQAx3SQN27tBr2M-EbA9Zkcmrq0qP-fKX-bMN8JoSJzEpDhqOwi_lp1xCh9YQEjH7NBx9-3VVQTd0T2AnsEc0UxKiKNSkYisAu1UMODSRrEqH5z_aj1bojGCpHrZ9jtD-ob4RaGG0"
+               alt="Usuario">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-6">
+    <!-- Hero curso -->
+    <section class="bg-primary-DEFAULT text-white rounded-lg p-6 mb-8 shadow-lg"
+             style="background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://i.imgur.com/d9T3Y8y.jpeg') no-repeat center center; background-size: cover;">
+      <div>
+        <h1 class="text-2xl md:text-3xl font-bold">IWI131 - Programación</h1>
+        <p class="text-lg opacity-90">Departamento de Informática</p>
+        <p class="text-lg opacity-90">2024 - Semestre 1</p>
+      </div>
+    </section>
+        
+    <!-- Barra de navegación (antes "Tabs") -->
+    <nav aria-label="Secciones del curso" class="mb-6">
+      <div class="border-b border-border-light dark:border-border-dark">
+        <div class="flex gap-6 -mb-px">
+ 
+          <a href="home-curso2.html"
+             class="px-3 py-2 text-primary-DEFAULT/90 dark:text-primary-light/90 hover:text-primary-light"
+             aria-label="Ir a información General">
+            Información General
+          </a>
+          <a href="list-modulos.html"
+            class="px-3 py-2 text-primary-DEFAULT/90 dark:text-primary-light/90 hover:text-primary-light"
+            aria-current="page">
+            Módulos
+          </a>
+
+          <a href="tareas.html"
+             class="px-3 py-2 text-primary-DEFAULT/90 dark:text-primary-light/90 hover:text-primary-light"
+             aria-label="Ir a Tareas ">
+            Tareas 
+          </a>
+
+          <a href="evaluaciones.html"
+             class="px-3 py-2 font-semibold text-primary-DEFAULT dark:text-primary-light border border-border-light dark:border-border-dark border-b-0 rounded-t-lg bg-card-light dark:bg-card-dark shadow-sm"
+             aria-label="ir a Calificaciones">
+            Calificaciones
+          </a>
+        <a href="evaluaciones.html"
+             class="px-3 py-2 text-primary-DEFAULT/90 dark:text-primary-light/90 hover:text-primary-light"
+             aria-label="ir a Calificaciones">
+            Foro
+          </a>
+        </div>
+      </div>
+    </nav>
+ 
+    <!-- Encabezado -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-4">
+      <div>
+        <h2 class="text-xl font-bold text-primary-DEFAULT dark:text-primary-light">Panel de calificaciones</h2>
+        <p class="text-sm text-subtle-light dark:text-subtle-dark">Vista integrada con promedio ponderado, avance y todas las evaluaciones.</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="btnExport" class="inline-flex items-center gap-2 bg-primary-light text-white text-sm font-semibold px-3 py-2 rounded-lg hover:opacity-90">
+          <span class="material-icons !text-[18px]">file_download</span> Descargar CSV
+        </button>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-lg p-4 shadow-sm">
+        <p class="text-xs text-subtle-light dark:text-subtle-dark">Promedio ponderado</p>
+        <p id="kpiPromedio" class="text-2xl font-bold mt-1">—</p>
+      </div>
+      <div class="bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-lg p-4 shadow-sm">
+        <p class="text-xs text-subtle-light dark:text-subtle-dark">Avance del curso</p>
+        <p id="kpiAvance" class="text-2xl font-bold mt-1">—</p>
+        <div class="mt-3 w-full bg-background-light dark:bg-background-dark rounded-full h-2.5">
+          <div id="progressAvance" class="bg-primary-light h-2.5 rounded-full" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-lg p-4 shadow-sm">
+        <p class="text-xs text-subtle-light dark:text-subtle-dark">Evaluaciones calificadas</p>
+        <p id="kpiCalificadas" class="text-2xl font-bold mt-1">—</p>
+      </div>
+      <div class="bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-lg p-4 shadow-sm">
+        <p class="text-xs text-subtle-light dark:text-subtle-dark">Pendientes</p>
+        <p id="kpiPendientes" class="text-2xl font-bold mt-1">—</p>
+      </div>
+    </section>
+
+    <!-- Tabla consolidada -->
+    <section aria-labelledby="tituloTabla">
+      <h3 id="tituloTabla" class="text-lg font-bold text-primary-DEFAULT dark:text-primary-light mb-3">Todas las evaluaciones</h3>
+
+      <div class="overflow-x-auto rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark shadow-sm">
+        <table id="tablaNotas" class="min-w-full text-sm">
+          <thead class="text-left border-b border-border-light dark:border-border-dark">
+            <tr class="text-subtle-light dark:text-subtle-dark">
+              <th class="py-3 px-4">Evaluación</th>
+              <th class="py-3 px-4">Ponderación</th>
+              <th class="py-3 px-4">Nota</th>
+              <th class="py-3 px-4">Aporte (p.p.)</th>
+              <th class="py-3 px-4">Estado</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border-light dark:divide-border-dark">
+            <!-- EXÁMENES (50%) -->
+            <tr data-weight="15" data-score="85" data-max="100">
+              <td class="py-3 px-4 font-medium">Certamen 1</td>
+              <td class="py-3 px-4">15%</td>
+              <td class="py-3 px-4 nota">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4 estado">—</td>
+            </tr>
+            <tr data-weight="15" data-score="48" data-max="100">
+              <td class="py-3 px-4 font-medium">Certamen 2</td>
+              <td class="py-3 px-4">15%</td>
+              <td class="py-3 px-4 nota">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4 estado">—</td>
+            </tr>
+
+            <!-- CONTROLES (30%) -->
+            <tr data-weight="5" data-score="70" data-max="100">
+              <td class="py-3 px-4 font-medium">Control 1</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 nota">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4 estado">—</td>
+            </tr>
+            <tr data-weight="5" data-score="68" data-max="100">
+              <td class="py-3 px-4 font-medium">Control 2</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 nota">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4 estado">—</td>
+            </tr>
+            <tr data-weight="5">
+              <td class="py-3 px-4 font-medium">Control 3</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 text-subtle-light dark:text-subtle-dark">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4"><span class="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">Pendiente</span></td>
+            </tr>
+
+            <!-- TAREAS (15%) -->
+            <tr data-weight="5" data-score="88" data-max="100">
+              <td class="py-3 px-4 font-medium">Tarea 1: Introducción a la Complejidad</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 nota">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4 estado">—</td>
+            </tr>
+            <tr data-weight="5" data-score="82" data-max="100">
+              <td class="py-3 px-4 font-medium">Tarea 2: Algoritmos de Ordenamiento</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 nota">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4 estado">—</td>
+            </tr>
+            <tr data-weight="5">
+              <td class="py-3 px-4 font-medium">Tarea 3: Estructuras de Datos Avanzadas</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 text-subtle-light dark:text-subtle-dark">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4"><span class="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">Pendiente</span></td>
+            </tr>
+
+            <!-- PROYECTOS (10%) -->
+            <tr data-weight="5" data-score="90" data-max="100">
+              <td class="py-3 px-4 font-medium">Proyecto 1: Diseño de Algoritmos Recursivos</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 nota">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4 estado">—</td>
+            </tr>
+            <tr data-weight="5">
+              <td class="py-3 px-4 font-medium">Proyecto Final: Análisis de Algoritmos</td>
+              <td class="py-3 px-4">5%</td>
+              <td class="py-3 px-4 text-subtle-light dark:text-subtle-dark">—</td>
+              <td class="py-3 px-4 aporte">—</td>
+              <td class="py-3 px-4"><span class="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">Pendiente</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3 text-xs text-subtle-light dark:text-subtle-dark">
+        Reglas: Aprobado ≥ 55, En riesgo ≥ 40 y &lt; 55, Reprobado &lt; 40.
+        <br>
+       El <b>promedio mostrado</b> corresponde al <b>promedio ponderado</b> de las evaluaciones <b>ya calificadas</b>; <u>no incluye</u> las pendientes.
+
+    </section>
+  </main>
+
+  <script>
+  // Umbrales (ajústalos si tu curso usa otros)
+  const PASS = 55;   // Aprobado
+  const RISK = 40;   // En riesgo si >= RISK y < PASS
+
+  (function () {
+    const rows = Array.from(document.querySelectorAll('#tablaNotas tbody tr'));
+    let sumWeighted = 0;             // suma de aportes (puntos de %), SOLO de calificadas
+    let sumWeightsWithScore = 0;     // suma de ponderaciones SOLO de calificadas
+    let avance = 0;                  // avance en % (suma de ponderaciones con nota)
+    let calificadas = 0;
+    let pendientes = 0;
+
+    rows.forEach(tr => {
+      const w = parseFloat(tr.dataset.weight || '0'); // ponderación en puntos de %
+      const score = tr.dataset.score ? parseFloat(tr.dataset.score) : null;
+      const max = tr.dataset.max ? parseFloat(tr.dataset.max) : null;
+
+      const notaTd = tr.querySelector('.nota') || tr.querySelectorAll('td')[2];
+      const aporteTd = tr.querySelector('.aporte');
+      const estadoTd = tr.querySelector('.estado');
+
+      if (score != null && max != null && max > 0) {
+        const pct = (score / max) * 100;            // 0..100
+        const aportePctPoints = (pct / 100) * w;    // puntos porcentuales al promedio final
+
+        // Acumuladores (SOLO calificadas)
+        sumWeighted += aportePctPoints;
+        sumWeightsWithScore += w;
+        avance += w;
+        calificadas += 1;
+
+        // Escribir celdas
+        if (notaTd) notaTd.textContent = pct.toFixed(1) + ' %';
+        if (aporteTd) aporteTd.textContent = aportePctPoints.toFixed(2) + ' %';
+
+        // Estado según umbrales (según pct de la evaluación)
+        let pillCls = 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200';
+        let label = 'Aprobado';
+        if (pct < PASS && pct >= RISK) {
+          pillCls = 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200';
+          label = 'En riesgo';
+        } else if (pct < RISK) {
+          pillCls = 'bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-200';
+          label = 'Reprobado';
+        }
+        if (estadoTd) estadoTd.innerHTML =
+          `<span class="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold ${pillCls}">${label}</span>`;
+      } else {
+        pendientes += 1;
+        if (notaTd) notaTd.textContent = '—';
+        if (aporteTd) aporteTd.textContent = '—';
+        if (estadoTd) estadoTd.innerHTML =
+          `<span class="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">Pendiente</span>`;
+      }
+    });
+
+    // Promedio ponderado SOLO sobre evaluaciones realizadas:
+    // (suma de aportes / suma de ponderaciones realizadas) * 100
+    const promedioPonderado = sumWeightsWithScore > 0
+      ? ((sumWeighted / sumWeightsWithScore) * 100).toFixed(2)
+      : '—';
+
+    const avancePct = Math.max(0, Math.min(100, avance)).toFixed(0);
+
+    // KPIs
+    document.getElementById('kpiPromedio').textContent =
+      promedioPonderado === '—' ? '—' : (promedioPonderado + ' %');
+    document.getElementById('kpiAvance').textContent = avancePct + ' %';
+    document.getElementById('progressAvance').style.width = avancePct + '%';
+    document.getElementById('kpiCalificadas').textContent = String(rows.length - pendientes);
+    document.getElementById('kpiPendientes').textContent = String(pendientes);
+
+    // Exportar CSV (sin Tipo ni Fecha)
+    document.getElementById('btnExport').addEventListener('click', () => {
+      const headers = ['Evaluación','Ponderación','Nota (%)','Aporte (p.p. %)','Estado'];
+      const data = rows.map(tr => {
+        const tds = tr.querySelectorAll('td');
+        // Orden actual: 0=Evaluación, 1=Ponderación, 2=Nota, 3=Aporte, 4=Estado
+        return [
+          tds[0].innerText.trim(),
+          tds[1].innerText.trim(),
+          (tr.querySelector('.nota')?.innerText.trim() || tds[2].innerText.trim()),
+          (tr.querySelector('.aporte')?.innerText.trim() || tds[3].innerText.trim()),
+          tds[4].innerText.trim()
+        ];
+      });
+      const csv = [headers, ...data].map(r => r.map(v => `"${v.replace(/"/g,'""')}"`).join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'calificaciones.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  })();
+</script>
+</body>
+</html>
+
